@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { handleFilter } from 'redux/contactsSlice';
+import { handleFilter } from 'redux/contacts/contactsSlice';
 import style from './Filter.module.css'
 
 export const Filter = () => {
