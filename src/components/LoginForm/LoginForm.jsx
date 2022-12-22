@@ -47,7 +47,7 @@ export const LoginForm = () => {
                         required
                     />
                 </Form.Group>
-                <Button type='submit'>Log in</Button>
+                <Button variant='secondary' type='submit'>Log in</Button>
             </Form>
         </Container>
     );

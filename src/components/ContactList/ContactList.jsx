@@ -4,7 +4,6 @@ import { deleteContact } from 'redux/contacts/operations';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 import propTypes from 'prop-types';
-import style from './ContactList.module.css'
 
 const getVisibleContacts = (contacts, filter) => {
     if (!filter) {
