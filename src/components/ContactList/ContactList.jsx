@@ -28,7 +28,7 @@ export const ContactList = () => {
             <ul className={style.list}>
                 {visibleContacts.map((contact, id) => (
                         <li className={style.listItem} key={id}>
-                            <p>{contact.name}: {contact.phone}</p>
+                            <p>{contact.name}: {contact.number}</p>
                                 <button className={style.btn} type="button" onClick={() => del(contact.id)}>
                                     Delete
                                 </button>

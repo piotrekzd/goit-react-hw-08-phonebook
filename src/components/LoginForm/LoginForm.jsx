@@ -7,11 +7,14 @@ export const LoginForm = () => {
     const dispatch = useDispatch();
 
     const handleSubmit = e => {
+        e.preventDefault();
         const form = e.currentTarget;
+        const email = form.elements.email.value;
+        const password = form.elements.password.value;
         dispatch(
             logIn({
-                email: form.elements.email.value,
-                password: form.elements.password.value,
+                email,
+                password,
             })
         );
         form.reset();
@@ -28,6 +31,7 @@ export const LoginForm = () => {
                         name='email'
                         type='email'
                         title='example@email.com'
+                        placeholder='Enter your email'
                         required
                     />
                 </Form.Group>
@@ -38,6 +42,7 @@ export const LoginForm = () => {
                         name='password'
                         type='password'
                         title='password'
+                        placeholder='Enter your password'
                         minLength='6'
                         required
                     />

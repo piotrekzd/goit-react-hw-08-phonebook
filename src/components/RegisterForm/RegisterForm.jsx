@@ -9,18 +9,21 @@ export const RegisterForm = () => {
     const handleSubmit = e => {
         e.preventDefault();
         const form = e.currentTarget;
+        const name = form.elements.name.value;
+        const email = form.elements.email.value;
+        const password = form.elements.password.value;
         dispatch(
             register({
-                name: form.elements.name.value,
-                email: form.elements.email.value,
-                password: form.elements.password.value,
+                name,
+                email,
+                password,
             })
         );
         form.reset();
     };
 
     return (
-        <Container className={style.Container}>
+        <Container className={style.container}>
             <Form className='border rounded p-4' onSubmit={handleSubmit}>
                 <p className={style.paragraph}>Register your account!</p>
                 <Form.Group className='mb-3' controlId='inputName'>

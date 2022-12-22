@@ -21,8 +21,10 @@ export default function Contacts() {
                 <title>Phonebook</title>
             </Helmet>
             <ContactForm />
-            <div>{isLoading && 'Processing request...'}</div>
             <Filter />
+            <div style={{ marginTop: 20, marginLeft: 20 }}>
+                {isLoading && 'Processing request...'}
+            </div>
             <ContactList />
         </>
     );
