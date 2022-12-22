@@ -1,6 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { getContacts, getFilter} from 'redux/contacts/selectors';
 import { deleteContact } from 'redux/contacts/operations';
+import ListGroup from 'react-bootstrap/ListGroup';
+import Button from 'react-bootstrap/Button';
 import propTypes from 'prop-types';
 import style from './ContactList.module.css'
 
@@ -25,16 +27,16 @@ export const ContactList = () => {
 
     return (
         <div>
-            <ul className={style.list}>
+            <ListGroup as="ol" numbered class='no-border'>
                 {visibleContacts.map((contact, id) => (
-                        <li className={style.listItem} key={id}>
+                        <ListGroup.Item as="li" key={id}>
                             <p>{contact.name}: {contact.number}</p>
-                                <button className={style.btn} type="button" onClick={() => del(contact.id)}>
+                                <Button variant='secondary' type="button" onClick={() => del(contact.id)}>
                                     Delete
-                                </button>
-                        </li>
+                                </Button>
+                        </ListGroup.Item>
                 ))}
-            </ul>
+                </ListGroup>
         </div>
     );
 };
