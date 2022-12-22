@@ -1,6 +1,8 @@
 import { useAuth } from 'utils/hooks/useAuth';
 import { MenuPopover } from 'components/MenuPopover/MenuPopover';
-import { Button, OverlayTrigger, Popover } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Popover from 'react-bootstrap/Popover';
 
 const popover = (
     <Popover>

@@ -2,6 +2,8 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import style from './ContactForm.module.css';
 
 export const ContactForm = () => {
@@ -36,9 +38,11 @@ export const ContactForm = () => {
     };
 
     return (
-        <form className={style.form} onSubmit={addNewContact}>
-            <label>Name</label>
-            <input
+        <Form className="no-border" onSubmit={addNewContact}>
+            <p className={style.paragraph}>Add a new contact</p>
+            <Form.Group className='mb-3' controlId='inputName'>
+            <Form.Label>Name</Form.Label>
+            <Form.Control
                 className={style.input}
                 type="text"
                 name="name"
@@ -47,8 +51,10 @@ export const ContactForm = () => {
                 placeholder='Enter name'
                 required
             />
-            <label>Phone</label>
-            <input
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='inputPhone'>
+            <Form.Label>Phone</Form.Label>
+            <Form.Control
                 className={style.input}
                 type="tel"
                 name="number"
@@ -56,10 +62,11 @@ export const ContactForm = () => {
                 title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                 placeholder='Enter number'
                 required
-            />
-            <button className={style.btn} type="submit">
+                />
+                </Form.Group>
+            <Button variant='secondary' type="submit">
                 Add contact
-            </button>
-        </form>
+            </Button>
+        </Form>
     );
 };

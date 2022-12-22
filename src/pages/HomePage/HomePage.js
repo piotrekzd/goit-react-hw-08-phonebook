@@ -4,7 +4,7 @@ export default function HomePage() {
     return (
         <div className={style.container}>
             <h1 className={style.title}>
-                Welcome to the phonebook app &#128214;
+                Welcome to the phonebook app &#128269;
             </h1>
         </div>
     );

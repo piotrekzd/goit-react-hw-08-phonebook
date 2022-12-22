@@ -1,6 +1,9 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
-import { Form, Button, Container } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Stack from 'react-bootstrap/Stack';
 import style from './RegisterForm.module.css';
 
 export const RegisterForm = () => {
@@ -24,41 +27,46 @@ export const RegisterForm = () => {
 
     return (
         <Container className={style.container}>
-            <Form className='border rounded p-4' onSubmit={handleSubmit}>
-                <p className={style.paragraph}>Register your account!</p>
-                <Form.Group className='mb-3' controlId='inputName'>
-                    <Form.Label>username</Form.Label>
-                    <Form.Control
-                        className={style.input}
-                        type='name'
-                        name='name'
-                        title='Type-in your name'
-                        required
-                    />
-                </Form.Group>
-                <Form.Group className='mb-3' controlId='inputEmail'>
-                    <Form.Label>e-mail</Form.Label>
-                    <Form.Control
-                        className={style.input}
-                        type='email'
-                        name='email'
-                        title='example@email.com'
-                        required
-                    />
-                </Form.Group>
-                <Form.Group className='mb-3' controlId='inputPassword'>
-                    <Form.Label>password</Form.Label>
-                    <Form.Control
-                        className={style.input}
-                        type='password'
-                        name='password'
-                        title='Min 6 characters required'
-                        minLength='6'
-                        required
-                    />
-                </Form.Group>
-                <Button type='submit'>Submit</Button>
-            </Form>
+            <Stack gap={3}>
+                <Form className='border rounded p-4' onSubmit={handleSubmit}>
+                    <p className={style.paragraph}>Register your account!</p>
+                    <Form.Group className='mb-3' controlId='inputName'>
+                        <Form.Label>username</Form.Label>
+                        <Form.Control
+                            className={style.input}
+                            type='name'
+                            name='name'
+                            title='Type-in your name'
+                            placeholder='John Doe'
+                            required
+                        />
+                    </Form.Group>
+                    <Form.Group className='mb-3' controlId='inputEmail'>
+                        <Form.Label>e-mail</Form.Label>
+                        <Form.Control
+                            className={style.input}
+                            type='email'
+                            name='email'
+                            title='Type-in your email'
+                            placeholder='example@gmail.com'
+                            required
+                        />
+                    </Form.Group>
+                    <Form.Group className='mb-3' controlId='inputPassword'>
+                        <Form.Label>password</Form.Label>
+                        <Form.Control
+                            className={style.input}
+                            type='password'
+                            name='password'
+                            title='Min 6 characters required'
+                            placeholder='Password'
+                            minLength='6'
+                            required
+                        />
+                    </Form.Group>
+                    <Button variant="secondary" type='submit'>Submit</Button>
+                </Form>
+            </Stack>
         </Container>
     );
 };

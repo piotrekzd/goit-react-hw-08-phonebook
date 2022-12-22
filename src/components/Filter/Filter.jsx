@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { handleFilter } from 'redux/contacts/contactsSlice';
+import Form from 'react-bootstrap/Form';
 import style from './Filter.module.css'
 
 export const Filter = () => {
@@ -10,11 +11,15 @@ export const Filter = () => {
         dispatch(handleFilter(value));
     };
     return (
-        <label className={style.label}>Find contacts by name
-            <input className={style.input}
-                type='name'
-                onChange={onChange}
-            />
-        </label>
+        <Form className='mb-1' style={{ paddingTop: 20 }}>
+            <Form.Group>
+                <Form.Label>Find contacts by name</Form.Label>
+                <Form.Control
+                    className={style.input}
+                    type='name'
+                    onChange={onChange}
+                />
+            </Form.Group>
+        </Form>
     );
 };
