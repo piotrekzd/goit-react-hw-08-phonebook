@@ -1,12 +1,5 @@
-import React, { useEffect } from 'react';
-import { Filter } from './Filter/Filter';
-import { ContactForm } from './ContactForm/ContactForm';
-import { ContactList } from './ContactList/ContactList';
-import { Loader } from './Loader/Loader';
-import { fetchContacts } from 'redux/contacts/operations';
-import { useDispatch, useSelector } from 'react-redux';
-import { getIsLoading, getError } from 'redux/contacts/selectors';
-import style from './App.module.css';
+import React, { useEffect, lazy } from 'react';
+
 
 export const App = () => {
 
