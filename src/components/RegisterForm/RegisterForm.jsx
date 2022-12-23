@@ -48,7 +48,7 @@ export const RegisterForm = () => {
                             type='email'
                             name='email'
                             title='Type-in your email'
-                            placeholder='example@gmail.com'
+                            placeholder='example@email.com'
                             required
                         />
                     </Form.Group>
