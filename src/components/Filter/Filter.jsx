@@ -11,7 +11,7 @@ export const Filter = () => {
         dispatch(handleFilter(value));
     };
     return (
-        <Form className='mb-1' style={{ paddingTop: 20 }}>
+        <Form className='mb-1' style={{ paddingTop: 20, paddingBottom: 20 }}>
             <Form.Group>
                 <Form.Label>Find contacts by name</Form.Label>
                 <Form.Control

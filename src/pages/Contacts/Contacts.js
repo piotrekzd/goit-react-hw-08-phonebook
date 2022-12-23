@@ -22,7 +22,7 @@ export default function Contacts() {
             </Helmet>
             <ContactForm />
             <Filter />
-            <div style={{ marginTop: 20, marginLeft: 20 }}>
+            <div style={{ marginTop: 20, marginBottom: 20 }}>
                 {isLoading && 'Processing request...'}
             </div>
             <ContactList />

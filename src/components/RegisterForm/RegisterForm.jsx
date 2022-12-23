@@ -59,7 +59,7 @@ export const RegisterForm = () => {
                             type='password'
                             name='password'
                             title='Min 6 characters required'
-                            placeholder='Password'
+                            placeholder='password'
                             minLength='6'
                             required
                         />
