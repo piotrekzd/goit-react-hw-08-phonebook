@@ -26,7 +26,7 @@ export const ContactList = () => {
 
     return (
         <div>
-            <ListGroup as="ol" numbered class='no-border'>
+            <ListGroup as="ol" numbered>
                 {visibleContacts.map((contact, id) => (
                         <ListGroup.Item as="li" key={id}>
                             <p>{contact.name}: {contact.number}</p>
